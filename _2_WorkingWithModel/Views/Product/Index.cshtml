@@ -1,0 +1,33 @@
+﻿@*@model List<_2_WorkingWithModel.Models.Categories>*@
+@model _2_WorkingWithModel.Models.ProductViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @foreach (var item in Model.Clist)
+        {
+            @item.CategoryID
+            @item.CategoryName
+            <br />
+        }
+    </div>
+    <div>
+        @foreach (var item in Model.Plist)
+        {
+            @item.ProductID
+            @item.ProductName
+            @item.UnitPrice
+            <br />
+        }
+    </div>
+</body>
+</html>
